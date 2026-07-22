@@ -1,0 +1,36 @@
+{
+  "name": "medeesoft-desktop",
+  "version": "1.0.0",
+  "description": "Medeesoft desktop app (WebView wrapper)",
+  "main": "main.js",
+  "author": "Medeesoft",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.medeesoft.desktop",
+    "productName": "Medeesoft",
+    "icon": "build/icon.ico",
+    "win": {
+      "target": [
+        { "target": "portable", "arch": ["x64"] },
+        { "target": "nsis", "arch": ["x64"] }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
