@@ -18,6 +18,11 @@ function createWindow() {
 
   Menu.setApplicationMenu(null);
 
+  // Keep the window title fixed as "Medeesoft" — don't let the page override it
+  mainWindow.on('page-title-updated', (event) => {
+    event.preventDefault();
+  });
+
   mainWindow.loadURL(TARGET_URL);
 
   mainWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription) => {
