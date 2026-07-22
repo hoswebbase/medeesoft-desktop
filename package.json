@@ -16,6 +16,7 @@
     "appId": "com.medeesoft.desktop",
     "productName": "Medeesoft",
     "icon": "build/icon.ico",
+    "publish": null,
     "win": {
       "target": [
         { "target": "portable", "arch": ["x64"] },
