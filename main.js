@@ -10,12 +10,6 @@ function createWindow() {
     height: 800,
     title: 'Medeesoft',
     icon: __dirname + '/build/icon.ico',
-    titleBarStyle: 'hidden',
-    titleBarOverlay: {
-      color: '#1d4ed8',
-      symbolColor: '#ffffff',
-      height: 32,
-    },
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
