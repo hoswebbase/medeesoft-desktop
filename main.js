@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, dialog } = require('electron');
 
-const TARGET_URL = 'http://192.168.214.4';
+const TARGET_URL = 'http://localhost';
 
 let mainWindow;
 
