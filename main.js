@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, dialog } = require('electron');
 
-const TARGET_URL = 'https://192.168.214.4';
+const TARGET_URL = 'http://192.168.214.4';
 
 let mainWindow;
 
@@ -10,11 +10,16 @@ function createWindow() {
     height: 800,
     title: 'Medeesoft',
     icon: __dirname + '/build/icon.ico',
+    show: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
     },
   });
+
+  // Open maximized (fills the screen, keeps title bar and taskbar)
+  mainWindow.maximize();
+  mainWindow.show();
 
   Menu.setApplicationMenu(null);
 
